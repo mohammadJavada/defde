@@ -12,12 +12,10 @@ export default async function AdvancedSearchPage() {
     page_size: 200,
   };
 
-  const brandData = await GetStaticDatasNotSSRAPI({
-    endPoint: "/BrandModelType/Get/All",
-    data: postedData,
-    method: "post",
-  });
-  return (
-    <AdvancedSearch colors={colors} models={brandData?.brandModelTypes ?? []} />
-  );
+  // const brandData = await GetStaticDatasNotSSRAPI({
+  //   endPoint: "/BrandModelType/Get/All",
+  //   data: postedData,
+  //   method: "post",
+  // });
+  return <AdvancedSearch colors={colors} models={[]} />;
 }
