@@ -16,12 +16,18 @@ export default async function CarsaleSellMyCarPage() {
     data: postedData,
     method: "post",
   });
-  const { cities } = await GetStaticDatasNotSSRAPI({
+  const cityData = await GetStaticDatasNotSSRAPI({
     endPoint: "/City/Get/All",
   });
-  const { colors } = await GetStaticDatasNotSSRAPI({
+  const colorData = await GetStaticDatasNotSSRAPI({
     endPoint: "/Color/Get/All",
   });
 
-  return <SellMyCar cars={brandData} cities={cities} colors={colors} />;
+  return (
+    <SellMyCar
+      cars={brandData}
+      cities={cityData?.cities || []}
+      colors={colorData?.colors || []}
+    />
+  );
 }
