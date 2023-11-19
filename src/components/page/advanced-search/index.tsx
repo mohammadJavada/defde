@@ -31,10 +31,10 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { RiSearch2Line } from "react-icons/ri";
 import { useAppDispatch, useAppSelector } from "src/hooks/redux-hooks";
 
-const MapModal = dynamic(() => import("@/attom/form@/components@/map@/map"), {
-  loading: () => <p>در حال بارگزاری نقشه ...</p>,
-  ssr: false,
-});
+// const MapModal = dynamic(() => import("@/attom/form@/components@/map@/map"), {
+//   loading: () => <p>در حال بارگزاری نقشه ...</p>,
+//   ssr: false,
+// });
 
 const AdvancedSearch = ({ colors, models }: any) => {
   // get dataFilter
@@ -228,7 +228,7 @@ const AdvancedSearch = ({ colors, models }: any) => {
                 جستجو براساس موقعیت مکانی
               </span>
               <div className="lg:w-2/6 md:w-1/2 w-full xl:h-full lg:h-[15rem] h-[18rem]">
-                <MapModal inSearch={true} />
+                {/* <MapModal inSearch={true} /> */}
               </div>
             </div>
 
