@@ -8,7 +8,7 @@ import VehicleCheckPacks, {
   VehicleCheckPacksMobile,
 } from "./components/packages";
 
-export default function VehicleCheck({ cars }: any) {
+export default function VehicleCheck() {
   return (
     <div className="flex flex-col justify-center items-center gap-16">
       <div>
