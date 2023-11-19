@@ -16,10 +16,10 @@ export default async function CarsaleSellMyCarPage() {
     data: postedData,
     method: "post",
   });
-  const { cities } = await GetStaticDatasAPI({
+  const { cities } = await GetStaticDatasNotSSRAPI({
     endPoint: "/City/Get/All",
   });
-  const { colors } = await GetStaticDatasAPI({
+  const { colors } = await GetStaticDatasNotSSRAPI({
     endPoint: "/Color/Get/All",
   });
 

@@ -13,7 +13,7 @@ export default async function NewCarOrdersPage() {
     method: "post",
   });
 
-  const publishedAds = await GetStaticDatasAPI({
+  const publishedAds = await GetStaticDatasNotSSRAPI({
     endPoint: "/AdSale/Get/Published/Top",
     method: "get",
   });

@@ -58,22 +58,7 @@ export default function RequestRegistrationModal({
 
   const handleClose = () => setOpen(false);
 
-  const handleNextClick = () => {
-    let postedData = {
-      phone_number: phone,
-      verify_code: +verifactionCode,
-    };
-    postAuthLoginRequest(postedData)
-      .then((res) => {
-        if (res.status == 200) {
-          setShowStepper(true);
-        }
-      })
-      .catch(() => {
-        toast.error("ورود موفقیت آمیز نبود.");
-      });
-  };
-
+ 
 
 
   return (
@@ -112,11 +97,7 @@ export default function RequestRegistrationModal({
                     اصلاح شماره همراه
                   </Link>
 
-                  {/* @@@___________________ OTP form ___________________@@@ */}
-                  <OTPCode setOtp={setOtp} />
-
-                  {/* @@@___________________ Register form (first_name, last_name, password) ___________________@@@ */}
-                  <RegisterForm otp={otp} />
+              
 
                   <span className="mt-5 block text-center text-xs font-light">
                     ثبت نام شما به معنای پذیرش{" "}
@@ -126,12 +107,6 @@ export default function RequestRegistrationModal({
                     است
                   </span>
                 </div>
-                <button
-                  className="bg-blue text-white font-bold px-2 py-3 rounded-lg w-full"
-                  onClick={handleNextClick}
-                >
-                  مرحله بعد
-                </button>
               </div>
             </>
           )}

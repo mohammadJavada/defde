@@ -13,7 +13,7 @@ export default function RegisterExhibitors() {
         backgroundPosition: 'center'
       }}
     >
-      <h2 className=" gradient-text font-bold text-center text-2xl mb-8 w-fit mx-auto">
+      <h2 id="enter-phone" className=" gradient-text font-bold text-center text-2xl mb-8 w-fit mx-auto">
         <span className="block">با اتو همه می‌شناسنت!</span>
         <span className="block mt-3">بازار خودرو رو تو مشتت بگیر</span>
       </h2>

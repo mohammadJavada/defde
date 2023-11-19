@@ -6,6 +6,7 @@ import { icons } from "@/data";
 import { useAppSelector } from "@/hooks/redux-hooks";
 import {
   PREVIEW_DATA,
+  REMOVE_ALL,
   SET_SHOW_NULL,
   SHOW_NULL_BUTTON,
 } from "@/redux/filter/filter-slice";
@@ -276,7 +277,9 @@ const SearchInput = () => {
     }, delay);
   }
 
+
   const searchHandler = (value) => {
+    console.log(value);
     if (value !== "" && value.length >= 3) {
       httpService
         .get(`${FRONT2DB}/AdSale/Search/Keywords/${value}`)
@@ -291,6 +294,8 @@ const SearchInput = () => {
           router.push("/car-order/list/products");
         })
         .catch((err) => console.log(err));
+    } else {
+      dispatch(REMOVE_ALL(""));
     }
   };
 

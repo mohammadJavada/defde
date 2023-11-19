@@ -17,11 +17,11 @@ export default async function Product() {
     method: "post",
   });
 
-  const { colors } = await GetStaticDataAPI({
+  const { colors } = await GetStaticDatasNotSSRAPI({
     endPoint: "/Color/Get/All",
   });
 
-  const { cities } = await GetStaticDataAPI({
+  const { cities } = await GetStaticDatasNotSSRAPI({
     endPoint: "/City/Get/All",
   });
 

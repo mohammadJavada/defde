@@ -1,5 +1,4 @@
 import { GetPublishedListAPI } from "@/apis/cars-list";
-import GetStaticDatasAPI from "@/apis/static-datas/get-static-data.api";
 import GetStaticDatasNotSSRAPI from "@/apis/static-datas/get-static-datas-not-ssr.api";
 import ProductListPage from "@/page/car-order/list/products/page";
 import { ConvertAPIImagesToBase64 } from "@/utils/get-images-base64-api";
@@ -16,12 +15,12 @@ export default async function Product() {
     method: "post",
   });
 
-  const { colors } = await GetStaticDatasAPI({
+  const { colors } = await GetStaticDatasNotSSRAPI({
     method: "get",
     endPoint: "/Color/Get/All",
   });
 
-  const citiesData = await GetStaticDatasAPI({
+  const citiesData = await GetStaticDatasNotSSRAPI({
     method: "get",
     endPoint: "/City/Get/All",
   });
